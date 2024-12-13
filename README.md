@@ -2,6 +2,9 @@
 
 O projeto **Pokedex** é uma aplicação web que permite gerenciar e exibir informações sobre Pokémons. O usuário pode adicionar novos Pokémons, visualizar uma lista de Pokémons cadastrados, e ouvir áudios relacionados a eles, tudo através de uma interface amigável e interativa.
 
+---
+
+
 ## Instruções de Instalação
 
 ### 1. Clonando o Repositório
