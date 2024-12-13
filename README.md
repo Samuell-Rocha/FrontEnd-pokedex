@@ -8,7 +8,7 @@ O projeto **Pokedex** é uma aplicação web que permite gerenciar e exibir info
 
 Primeiramente, clone o repositório para o seu ambiente local:
 
-git clone https://github.com/seu-usuario/pokedex-frontend.git
+git clone https://github.com/Samuell-Rocha/FrontEnd-pokedex.git
 
 ### 2.  Simular um Servidor Local
 
