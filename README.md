@@ -18,7 +18,8 @@ python -m http.server 3000
 
 Acesse o site no navegador via:
 
-http://localhost:3000
+[http://localhost:3000](http://localhost:3000)
+
 
 
 
