@@ -8,14 +8,12 @@ O projeto **Pokedex** é uma aplicação web que permite gerenciar e exibir info
 
 Primeiramente, clone o repositório para o seu ambiente local:
 
-```bash
 git clone https://github.com/seu-usuario/pokedex-frontend.git
 
 ### 2.  Simular um Servidor Local
 
 No diretório onde o arquivo HTML está salvo, rode o seguinte comando:
 
-```bash
 python -m http.server 3000
 
 Acesse o site no navegador via:
