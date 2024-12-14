@@ -1,0 +1,367 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+.pokedex {
+  width: 300px;
+  height: 450px;
+  background: #d32f2f;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: 4px solid #b71c1c;
+}
+.pokedex .top-section {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+}
+.pokedex .top-section .circle {
+  width: 40px;
+  height: 40px;
+  background: #03a9f4;
+  border-radius: 50%;
+  border: 2px solid black;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.pokedex .top-section .lights {
+  display: flex;
+  gap: 5px;
+  margin-left: 10px;
+}
+.pokedex .top-section .lights .light {
+  width: 10px;
+  height: 10px;
+  background: #ffeb3b;
+  border-radius: 50%;
+  border: 2px solid #fbc02d;
+}
+.pokedex .top-section .lights .light:nth-child(2) {
+  background: #4caf50;
+  border-color: #388e3c;
+}
+.pokedex .top-section .lights .light:nth-child(3) {
+  background: #f44336;
+  border-color: #d32f2f;
+}
+.pokedex .screen {
+  width: 80%;
+  height: 80%;
+  background: #fff;
+  border: 3px solid #757575;
+  border-radius: 5px;
+  margin: 70px auto 0;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pokedex .screen .content {
+  width: 90%;
+  height: 90%;
+  background: #fafafa no-repeat center;
+  background-size: cover;
+  border: 2px solid #bdbdbd;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu-button {
+  background-color: #1976d2;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.menu-button:hover {
+  background-color: #1565c0;
+}
+.divider {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 10px;
+  background: #c62828;
+  border-radius: 5px;
+}
+
+.menu {
+  width: 172px;
+  height: 350px;
+  max-width: 172px;
+  background: #333;
+  padding: 20px;
+  border: 2px solid #666;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.head {
+  display: ruby;
+  color: white;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.content {
+  background: #333;
+  opacity: 0; /* Começa invisível */
+  transform: translateY(50px); /* Inicia deslocado para baixo */
+  animation: fadeInContent 0.8s ease forwards; /* Animação de entrada */
+}
+
+/* Animação para o cabeçalho */
+.cabecalho {
+  display: flex;
+  opacity: 0;
+  transform: translateY(-50px); /* Começa deslocado para cima */
+  animation: slideDown 0.5s ease forwards;
+  animation-delay: 0.3s; /* Atraso para iniciar após o content */
+  color: white;
+}
+
+/* Animação dos itens do menu */
+.menu-item {
+  opacity: 0;
+  transform: translateX(-30px); /* Inicia deslocado para a esquerda */
+  animation: slideInItem 0.5s ease forwards;
+}
+
+.menu-item:nth-child(2) {
+  animation-delay: 0.6s; /* Atraso para o segundo item */
+}
+
+.menu-item:nth-child(3) {
+  animation-delay: 0.9s; /* Atraso para o terceiro item */
+}
+
+/* Definição das animações */
+@keyframes fadeInContent {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInItem {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #444;
+  padding: 15px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  border: 2px solid #555;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background: #555;
+  color: #ffd700;
+  transform: scale(1.05);
+}
+
+.menu-item[data-color="blue"] {
+  border-color: #1976d2;
+}
+.menu-item[data-color="red"] {
+  border-color: #d32f2f;
+}
+.menu-item[data-color="yellow"] {
+  border-color: #fbc02d;
+}
+.menu-item[data-color="purple"] {
+  border-color: #9c27b0;
+}
+.menu-item[data-color="green"] {
+  border-color: #388e3c;
+}
+
+/*ADICIONAR*/
+
+#voltar-btn {
+  display: inline-flex; /* Para alinhar conteúdo horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  margin-left: 10px;
+  gap: 8px; /* Espaço entre ícone e texto (se tiver) */
+  font-size: 20px; /* Tamanho da fonte */
+  color: white; /* Cor da seta */
+  background-color: #ff0000; /* Cor de fundo */
+  border: none; /* Remove borda padrão */
+  border-radius: 8px; /* Bordas arredondadas */
+  /* Espaçamento interno */
+  cursor: pointer; /* Indica que é clicável */
+  transition: background-color 0.3s, transform 0.2s; /* Suaviza a animação */
+}
+
+#voltar-btn:hover {
+  background-color: #b31b00; /* Cor mais escura no hover */
+  transform: scale(1.05); /* Leve aumento no hover */
+}
+
+#voltar-btn:active {
+  transform: scale(0.95); /* Leve redução ao clicar */
+}
+.title {
+  text-align: center;
+  margin-left: 5px;
+}
+input[type="file"] {
+  color: transparent;
+}
+
+input[type="file"]::file-selector-button {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #0056b3;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+#tipo {
+  width: 77%;
+}
+#nome {
+  width: 70%;
+}
+#nivel {
+  width: 70%;
+}
+
+.screen2 {
+  height: 100%;
+  width: 100%;
+  background-color: #1d1e22;
+  color: white;
+}
+
+.pokemonForm {
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
+}
+.campo {
+  margin-bottom: 5px;
+  height: 20px;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  margin-top: 10px;
+}
+
+.button a {
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ffa12b;
+  display: block;
+  position: relative;
+  padding: 10px 40px;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+  -webkit-box-shadow: inset 0 1px 0 #ffe5c4, 0 8px 0 #915100;
+  -moz-box-shadow: inset 0 1px 0 #ffe5c4, 0 8px 0 #915100;
+  box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #915100;
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.button a:active {
+  top: 10px;
+  background-color: #f78900;
+
+  -webkit-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #915100;
+  -moz-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3pxpx 0 #915100;
+  box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #915100;
+}
+
+.button:after {
+  content: "";
+  height: 100%;
+  width: 98%;
+  padding: -6px;
+  position: absolute;
+  bottom: -13px;
+  left: 2px;
+  z-index: -1;
+  background-color: #2b1800;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}

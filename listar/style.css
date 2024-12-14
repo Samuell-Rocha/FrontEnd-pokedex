@@ -1,0 +1,89 @@
+.screen3 {
+  height: 100%;
+  width: 100%;
+  background-color: #1d1e22;
+  color: white;
+  
+}
+
+.pokemonList {
+  height: 240px;
+  list-style: none;
+  padding: 0;
+  color: white;
+  width: auto;
+  overflow-y: auto; 
+  overflow-x: auto; 
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+#pokemonList::-webkit-scrollbar {
+  width: 6px; /* Largura da barra de rolagem */
+}
+
+#pokemonList::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Cor de fundo da barra de rolagem */
+  border-radius: 10px;
+}
+
+.pokemonList li {
+    padding: 15px;
+    font-size: 20px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 84%; 
+  }
+
+  .pokemonList li:hover {
+    background-color: #53ac51;
+    color: #fff;
+    transform: translateX(5px);
+  }
+
+  .pokemonList li:last-child {
+    border-bottom: none;
+  }
+
+#voltar-btn {
+  display: inline-flex; /* Para alinhar conteúdo horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  margin-left: 50px;
+  gap: 8px; /* Espaço entre ícone e texto (se tiver) */
+  font-size: 20px; /* Tamanho da fonte */
+  color: white; /* Cor da seta */
+  background-color: #ff0000; /* Cor de fundo */
+  border: none; /* Remove borda padrão */
+  border-radius: 8px; /* Bordas arredondadas */
+  cursor: pointer; /* Indica que é clicável */
+  transition: background-color 0.3s, transform 0.2s; /* Suaviza a animação */
+}
+
+#voltar-btn:hover {
+  background-color: #b31b00; /* Cor mais escura no hover */
+  transform: scale(1.05); /* Leve aumento no hover */
+}
+
+#voltar-btn:active {
+  transform: scale(0.95); /* Leve redução ao clicar */
+}
+.title {
+  text-align: center;
+  margin-left: 10px;
+}
+h2{
+    text-align: center;
+}
+
+.pokemon-item{
+  display: flex;
+  align-items: center;
+}
+
+.pokemon-item img{
+  width: 30px;
+  height: 30px;
+}
+
+

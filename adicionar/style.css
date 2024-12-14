@@ -1,0 +1,137 @@
+#voltar-btn {
+    display: inline-flex; /* Para alinhar conteúdo horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-left: 10px;
+    gap: 8px; /* Espaço entre ícone e texto (se tiver) */
+    font-size: 20px; /* Tamanho da fonte */
+    color: white; /* Cor da seta */
+    background-color: #ff0000; /* Cor de fundo */
+    border: none; /* Remove borda padrão */
+    border-radius: 8px; /* Bordas arredondadas */
+    /* Espaçamento interno */
+    cursor: pointer; /* Indica que é clicável */
+    transition: background-color 0.3s, transform 0.2s; /* Suaviza a animação */
+  }
+  
+  #voltar-btn:hover {
+    background-color: #b31b00; /* Cor mais escura no hover */
+    transform: scale(1.05); /* Leve aumento no hover */
+  }
+  
+  #voltar-btn:active {
+    transform: scale(0.95); /* Leve redução ao clicar */
+  }
+  .title {
+    text-align: center;
+    margin-left: 5px;
+  }
+  input[type="file"] {
+    color: transparent;
+  }
+  
+  input[type="file"]::file-selector-button {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  input[type="file"]::file-selector-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  #tipo {
+    width: 77%;
+  }
+  #nome {
+    width: 70%;
+  }
+  #nivel {
+    width: 70%;
+  }
+  
+  .screen2 {
+    height: 100%;
+    width: 100%;
+    background-color: #1d1e22;
+    color: white;
+  }
+  
+  .pokemonForm {
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+  }
+  .campo {
+    margin-bottom: 5px;
+    height: 20px;
+  }
+  
+  .button {
+    position: relative;
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .button a {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ffa12b;
+    display: block;
+    position: relative;
+    padding: 10px 40px;
+  
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px #000;
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+  
+    -webkit-box-shadow: inset 0 1px 0 #ffe5c4, 0 8px 0 #915100;
+    -moz-box-shadow: inset 0 1px 0 #ffe5c4, 0 8px 0 #915100;
+    box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #915100;
+  
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+  
+  .button a:active {
+    top: 10px;
+    background-color: #f78900;
+  
+    -webkit-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #915100;
+    -moz-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3pxpx 0 #915100;
+    box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #915100;
+  }
+  
+  .button:after {
+    content: "";
+    height: 100%;
+    width: 98%;
+    padding: -6px;
+    position: absolute;
+    bottom: -13px;
+    left: 2px;
+    z-index: -1;
+    background-color: #2b1800;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+  }
+  
